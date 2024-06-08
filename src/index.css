@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+.bg-img {
+  max-height: 400px;
+}
+
+.bg-img img {
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+}
