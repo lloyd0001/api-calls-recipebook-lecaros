@@ -1,30 +1,48 @@
+:root {
+  --bgcolor: #2D3047;
+  --primacolor: #E84855;
+  --seconcolor: #FF9B71;
+  --highlight1: #FFFD82;
+  --highlight2: #1B998B;
+  --white: #ffffff;
+  --blc:#16151c;
+  
+}
 
 body{
-    background-color:#6B8A7A;
+  background-image: linear-gradient(var(--highlight2), var(--bgcolor));
     padding: 0;
     font-family: 'Poppins', sans-serif;
   }
+
   h2{
+    
     padding: 30px 80px;
     margin: 0%;
-    background-color: #254336;
+    background-color: var(--highlight2);
     text-align: center;
     font-size: 30px;
     font-weight:bold;
-    color: #eee;
+    color:var(--white);
+    border-radius: 0rem 0rem 15rem;
+    width: 30%;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    
   }
   h3{
     margin-left: 30px;
   }
   .name{
     padding: 20px 20px;
-    margin: 0%;
-    background-color: #254336;
+    margin: 0%; 
+    background-image: linear-gradient(to bottom right, var(--bgcolor), var(--seconcolor));
     text-align: center;
     font-size: 30px;
     font-weight:bold;
-    color: #eee;
+    color: #ffff;
+    
   }
+
   p {
     text-align: center;
   }
@@ -55,7 +73,7 @@ body{
   
   .input-design{
     margin-top: -120px;
-    background-color: white;
+    background-color: white;  
     border: none;
     height: 100%;
     border-radius: 5px;
@@ -73,41 +91,43 @@ body{
   
   .modal-button {
     display: flex; 
-    margin-bottom: -70px;
+    margin-top: 8px;
+    margin-bottom: -123px;
     justify-content: flex-end; 
     margin-right: 10px;
     
   }
   
   .modal-button button {
-    margin-top: 20px;
+    margin-top: 3%;
     margin-right:10px ;
     width: 130px;
     height: 40px;
-    border-radius: 5px;
+    border-radius: 15px 50px;
     border: none;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 60px;
-    background-color:  #7d602d;
+    background-color:  var(--primacolor);
+    box-shadow: 10px 10px lightblue;
   }
 
   .modal-button-2 button {
-    margin-top: 20px;
+    
     margin-right:10px ;
     width: 100px;
     height: 40px;
     border-radius: 10px;
     border: none;
     margin-bottom: 60px;
-    background-color: #ffecc6;
+    background-color: var(--highlight1);
   }
   
   
   
   .modal {
     border-radius: 8px;
-    background-color: #6B8A7A;
+    background-color: var(--highlight2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -176,19 +196,21 @@ body{
   .item-box-1{
     margin-top: 20px;
     flex-basis: calc(20% - 20px); 
-    background-color: #B7B597;
+    background-image: linear-gradient(var(--bgcolor), var(--blc));
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 1.3rem;
+    color: var(--white);
   }
   
   .item-box-2 {
-    margin-top: 10px;
+    margin-top: 20px;
     flex-basis: calc(20% - 20px); 
-    background-color:#B7B597;
+    background-image: linear-gradient(var(--highlight1), var(--seconcolor));
     padding: 10px;
     box-sizing: border-box;
-    border-radius: 5px;
+    border-radius: 1.3rem;
+    color: var(--blc);
   }
   .dish{
 
@@ -203,7 +225,7 @@ body{
   }
 
   .buttons button {
-    background-color: #7d602d;
+    background-color: var(--primacolor);
   }
 
   .favorite{
@@ -223,7 +245,7 @@ body{
     padding: 8px 8px; 
     border-radius: 10px; 
     color: white;
-    background-color: #7d602d;
+    background-color:  var(--primacolor);
     margin-bottom: 10px;
     border: none;
   }

@@ -146,7 +146,7 @@ function DataForm() {
                                     type="text"
                                     value={cuisine}
                                     onChange={(e) => setCuisine(e.target.value)}
-                                    placeholder="Cuisine"
+                                    placeholder="Cheese Type"
                                 />
                             </div>
                             {error && <div className="error-message">{error}</div>}
@@ -156,53 +156,6 @@ function DataForm() {
                 </div>
             )}
 
-            <div className="search-bar-container">
-                <input
-                    className="input-design"
-                    type="text"
-                    placeholder="Search Recipes"
-                    value={nameSearch}
-                    onChange={(e) => setNameSearch(e.target.value)}
-                />
-                <div className="category-dropdown">
-                    <button className="category-button" onClick={() => setShowCategories(!showCategories)}>Categories</button>
-                    {showCategories && (
-                        <div className="category-list">
-                            <button onClick={() => handleCategoryChange("All")}>All</button>
-                            {categories.map(category => (
-                                <button key={category} onClick={() => handleCategoryChange(category)}>{category}</button>
-                            ))}
-                        </div>
-                    )}
-                </div>
-            </div>
-
-            {favorites.length > 0 && (
-                <div>
-                    <h2>FAVORITE RECIPES</h2>
-                    <div className="item-container">
-                        {favorites.map(item => (
-                            <div key={item._id} className="item-box-2">
-                                <button onClick={() => toggleFavorite(item._id)}>
-                                    <span role="img" aria-label="star">⭐</span>
-                                </button>
-                                <div>
-                                    <strong>Name:</strong> {item.name}
-                                </div>
-                                <div>
-                                    <strong>Ingredients:</strong> {item.ingredients}
-                                </div>
-                                <div>
-                                    <strong>Steps:</strong> {item.steps}
-                                </div>
-                                <div>
-                                    <strong>Cuisine:</strong> {item.cuisine}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
-            )}
 
             <h2>RECIPES</h2>
             <div className="item-container">
@@ -235,6 +188,32 @@ function DataForm() {
                     </div>
                 ))}
             </div>
+            {favorites.length > 0 && (
+                <div>
+                    <h2>FAVORITE RECIPES</h2>
+                    <div className="item-container">
+                        {favorites.map(item => (
+                            <div key={item._id} className="item-box-2">
+                                <button onClick={() => toggleFavorite(item._id)}>
+                                    <span role="img" aria-label="star">⭐</span>
+                                </button>
+                                <div>
+                                    <strong>Name:</strong> {item.name}
+                                </div>
+                                <div>
+                                    <strong>Ingredients:</strong> {item.ingredients}
+                                </div>
+                                <div>
+                                    <strong>Steps:</strong> {item.steps}
+                                </div>
+                                <div>
+                                    <strong>Cuisine:</strong> {item.cuisine}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
